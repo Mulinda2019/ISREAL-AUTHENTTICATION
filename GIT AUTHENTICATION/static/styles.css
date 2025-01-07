@@ -1,0 +1,186 @@
+
+/* General Reset - Ensures consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling - Sets font and general text appearance */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Tags Styling - Provides spacing and margins */
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+/* Link Styling - Ensures links have no underline and match the primary text color */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Navbar Styling - Styles the top navigation bar */
+.navbar {
+    background-color: #333; /* Dark background for the navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu Button Styling - Button to toggle the navigation links */
+.navbar .menu-button {
+    background-color: #333; /* Matches navbar background */
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer; /* Changes to pointer on hover */
+}
+
+/* Navbar Links - Style for navigation links */
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    font-size: 1rem;
+    padding: 5px 10px;
+    display: block;
+}
+
+/* Show class for mobile navigation toggle */
+.navbar .nav-links.show {
+    display: block;
+}
+
+/* Hover Effect for Navbar Links - Darken on hover */
+.navbar .nav-links li a:hover {
+    background-color: #555;
+}
+
+/* Header Section - Main title and description */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #444;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Main Section Styling */
+main {
+    padding: 20px;
+}
+
+/* Section Styling - Margins and general layout for each section */
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Image Container Styling - Aligns images and adds hover effect */
+section .image-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section .image-container img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+section .image-container img:hover {
+    transform: scale(1.05); /* Image zoom effect on hover */
+}
+
+/* Code Container Styling - Styling for backend code sections */
+section .code-container {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+section .code-container pre {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto; /* Prevents overflow of long code lines */
+}
+
+/* Explanation Section Styling */
+section .explanation {
+    margin-top: 20px;
+}
+
+section .explanation h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+section .explanation p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive Design - Adjusts layout for smaller screens */
+@media (max-width: 768px) {
+    /* Mobile Navigation */
+    .navbar .nav-links {
+        display: none; /* Initially hidden */
+        flex-direction: column; /* Stack links vertically */
+    }
+
+    .navbar .nav-links.show {
+        display: flex; /* Show links when the menu button is clicked */
+    }
+
+    /* Resize Menu Button for mobile */
+    .navbar .menu-button {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust Navbar Link Spacing */
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Adjust section heading size for mobile */
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Adjust header size for smaller screens */
+    header h1 {
+        font-size: 2rem;
+    }
+}
